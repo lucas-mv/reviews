@@ -4,9 +4,15 @@
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="shared-styles.html">
 
-<dom-module id="reviews">
+<dom-module id="reviews-me">
   <template>
-    <style include="reviews-style"></style>
+    <style include="shared-styles">
+      :host {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+      }
+    </style>
 
     <paper-card>
       <div class="card-content layout horizontal">
@@ -17,10 +23,10 @@
   </template>
 
   <script>
-    class Reviews extends Polymer.Element {
-      static get is() { return 'reviews'; }
+    class ReviewsMe extends Polymer.Element {
+      static get is() { return 'reviews-me'; }
     }
 
-    window.customElements.define(Reviews.is, Reviews);
+    window.customElements.define(ReviewsMe.is, ReviewsMe);
   </script>
 </dom-module>
